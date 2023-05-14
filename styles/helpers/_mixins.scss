@@ -1,0 +1,172 @@
+/// Breakpoints
+$breakpoints: (
+        mobile-small: 568px,
+        mobile: 768px,
+        tablet: 1024px,
+        tablet-landscape: 1280px,
+        laptop: 1366px,
+        desktop: 1440px,
+);
+
+///  Mixin, which generates media-query based on max-width approach.
+@mixin breakpoint-max($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint: map-get($breakpoints, $breakpoint);
+  }
+  ///  Subtract -1px from $breakpoint value to prevent future conflicts in code at the specific screen resolutions.
+  @media (max-width: ($breakpoint - 1)) {
+    @content;
+  }
+}
+
+///  Mixin, which generates media-query based on min-width approach.
+@mixin breakpoint-min($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint: map-get($breakpoints, $breakpoint);
+  }
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin flex($display: flex, $align-items: stretch, $justify-content: flex-start, $gap: 0) {
+  display: $display;
+  align-items: $align-items;
+  justify-content: $justify-content;
+  gap: $gap;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-start {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+@mixin items-center-justify-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin items-start-justify-between {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+@mixin items-end-justify-between {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+/// Position
+@mixin position-top-right($top:0, $right:0) {
+  position: absolute;
+  top: $top;
+  right: $right;
+}
+
+@mixin position-top-left($top:0, $left:0) {
+  position: absolute;
+  top: $top;
+  left: $left;
+}
+
+@mixin position-bottom-right($bottom:0, $right:0) {
+  position: absolute;
+  bottom: $bottom;
+  right: $right;
+}
+
+@mixin position-bottom-left($bottom:0, $left:0) {
+  position: absolute;
+  bottom: $bottom;
+  left: $left;
+}
+
+///  Custom classes
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+
+/// Spacing
+
+@mixin generate-space($unit, $step, $class-name, $property) {
+  $count: 0;
+  $space-max: 50;
+
+  @while $count <= $space-max {
+    .#{$class-name}-#{$count} {
+      @each $subproperty in $property {
+        #{$subproperty}: #{$count + $unit};
+      }
+    }
+    $count: $count + $step;
+  }
+}
+
+$property-list: (
+        padding (padding) 1,
+        padding-left (padding-left) 1,
+        padding-right (padding-right) 1,
+        padding-top (padding-top) 1,
+        padding-bottom (padding-bottom) 1,
+        margin (margin) 1,
+        margin-left (margin-left) 1,
+        margin-right (margin-right) 1,
+        margin-top (margin-top) 1,
+        margin-bottom (margin-bottom) 1,
+        padding-horizontal (padding-left, padding-right) 2,
+        padding-vertical (padding-top, padding-bottom) 2,
+        margin-horizontal (margin-left, margin-right) 2,
+        margin-vertical (margin-top, margin-bottom) 2,
+);
+
+
+@each $class-name, $property, $step  in $property-list {
+  @include generate-space(
+          $unit: px,
+          $step: $step,
+          $class-name: $class-name,
+          $property: $property
+  );
+}
+
+///  Custom classes
+.margin-vertical-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.margin-horizontal-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.margin-bottom-auto {
+  margin-bottom: auto;
+}
+
+.margin-top-auto {
+  margin-top: auto;
+}
+
+.margin-left-auto {
+  margin-left: auto;
+}
+
+.margin-right-auto {
+  margin-right: auto;
+}

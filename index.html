@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EasyDMARC</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+<header class="topbar">
+    <nav class="navbar-custom padding-horizontal-12">
+        <div class="nav-section-left">
+            <a href="#" class="logo">
+                <img src="img/logo.png" class="logo-pc" alt="EasyDMARC"/>
+                <img src="img/logo-mobile.png" class="logo-mobile" alt="EasyDMARC"/>
+            </a>
+        </div>
+        <div class="nav-section-right">
+            <div class="item-nav btn-icon position-relative">
+                <i class="notification fa-solid fa-bell"></i>
+                <span class="position-absolute badge">5</span>
+            </div>
+            <div class="item-nav service">
+                <span>Compliance Service</span>
+                <span class="service-new">new</span>
+            </div>
+            <div class="item-nav help margin-right-16">
+                <i class="fa-solid fa-circle-question"></i>
+                <span>Help</span>
+            </div>
+            <div class="item-nav profile">
+                <div class="profile-name">AG</div>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="wrapper">
+    <div class="menu-top">
+        <input class="menu-btn" type="checkbox">
+        <div class="vertical-menu">
+            <div class="sidebar-menu-scroll mm-show">
+                <div class="sidebar-logo">
+                    <a href="#">
+                        <div class="toggle-button">
+                            <i class="fa fa-bars"></i>
+                        </div>
+                        <img src="img/platform.png" alt="EasyDMARC"/>
+                        <span class="sidebar-logo-title padding-left-8">EasyDMARC</span>
+                    </a>
+
+                    <button class="vertical-menu-btn">
+                        <i class="fa fa-angle-right"></i>
+                    </button>
+                </div>
+                <div id="sidebar-menu" class="mm-active">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                <span class="icon-sprite dashboard"></span>
+                                <span class="">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                <span class="icon-sprite domains"></span>
+                                <span class="">Domains</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                <span class="icon-sprite aggregate"></span>
+                                <span class="">Aggregate Reports</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                <span class="icon-sprite failure"></span>
+                                <span class="">Failure Reports</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                <span class="icon-sprite email"></span>
+                                <span class="">Email Senders</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mm-active">
+                                <span class="icon-sprite easy-spf"></span>
+                                <span class="">EasySPF</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                <span class="icon-sprite managed-dmarc"></span>
+                                <span class="">Managed DMARC</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                <span class="icon-sprite managed-bimi"></span>
+                                <span class="">Managed BIMI</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                <span class="icon-sprite reputation"></span>
+                                <span class="">Reputation Monitoring</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                <span class="icon-sprite email-investigation"></span>
+                                <span class="">Email Investigation</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                <span class="icon-sprite alerts"></span>
+                                <span class="">Alerts</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link has-arrow">
+                                <span class="icon-sprite tools"></span>
+                                <span class="">Tools</span>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                            <ul class="nav mm-collapse">
+                                <li class="nav-item">
+                                    <a class="nav-link">
+                                        Tools item
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                <span class="icon-sprite timeline"></span>
+                                <span class="">DNS Timeline</span>
+                            </a>
+                        </li>
+                        <div class="menu-item margin-vertical-24 margin-horizontal-12">
+                            <span class="menu-heading">EasyDMARC settings</span>
+                        </div>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                <span class="icon-sprite domain-management"></span>
+                                <span class="">Domain management</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                <span class="icon-sprite groups"></span>
+                                <span class="">Domain groups</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                <span class="icon-sprite alert-management"></span>
+                                <span class="">Alert management</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                <span class="icon-sprite reporting"></span>
+                                <span class="">Reporting</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-wrapper">
+        <div class="header-container">
+            <div class="header-container-left">
+                <div>Plus Plan</div>
+                <button class="btn btn-upgrade">Upgrade Plan</button>
+            </div>
+            <div class="header-container-right">
+                <div role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"
+                     style="--value:20"></div>
+                <label class="dropdown">
+                    <div class="dd-button not-border">
+                        Permitted volume usage
+                    </div>
+                    <input type="checkbox" class="dd-input">
+                    <ul class="dd-menu">
+                        <li>Not allowed amount of use</li>
+                        <li>Permitted volume usage</li>
+                    </ul>
+                </label>
+            </div>
+        </div>
+        <div class="section-wrapper">
+            <div class="page-title">
+                <span class="icon-sprite email"></span>
+                <h2 class="page-heading">EasySPF</h2>
+            </div>
+            <div class="card-header">
+                <label class="dropdown">
+                    <div class="dd-button">
+                        easydmarc.com
+                    </div>
+                    <input type="checkbox" class="dd-input">
+                    <ul class="dd-menu">
+                        <li>mail.com</li>
+                        <li>google.com</li>
+                        <li>list.am</li>
+                    </ul>
+                </label>
+            </div>
+            <div class="card-body">
+                <div class="card-item">
+                    <div class="text-center">
+                        <div class="card-item-title">EasySPF trial has expired</div>
+                        <div class="card-item-subtitle">Thank you for using EasySPF. Your trial has now ended.
+                            We’ll continue to support your domain SPF record, but access to record management has been
+                            restricted.
+                        </div>
+                    </div>
+                    <div class="text-center symbol-title">SPF Parts</div>
+                    <div class="symbol-group">
+                        <div class="symbol bg-info symbol-circle">
+                            <div class="symbol-label">AA</div>
+                        </div>
+                        <div class="symbol bg-warning symbol-circle">
+                            <img src="img/image-1.png"/>
+                        </div>
+                        <div class="symbol bg-warning symbol-circle">
+                            <img src="img/image-2.png"/>
+                        </div>
+                        <div class="symbol bg-warning symbol-circle">
+                            <img src="img/image-3.png"/>
+                        </div>
+                        <div class="symbol bg-warning symbol-circle">
+                            <img src="img/image-4.png"/>
+                        </div>
+                        <div class="symbol bg-info symbol-circle">
+                            <div class="symbol-label">+3</div>
+                        </div>
+                    </div>
+                    <div class="value-text text-center">Get my SPF record value</div>
+                    <div class="lookups-block">
+                        <div class="lookups-item text-center">
+                            <div class="lookups-item-header">Lookups without EasySPF</div>
+                            <div class="lookups-item-body text-error">
+                                25 out of 10
+                            </div>
+                        </div>
+                        <div class="lookups-item text-center">
+                            <div class="lookups-item-header">Lookups with EasySPF</div>
+                            <div class="lookups-item-body text-success">
+                                3 out of 10
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plan-block">
+                        <div class="plan-block-title">
+                            <span>Preminum Plan Feature</span>
+                        </div>
+                    </div>
+                    <div class="benefits">
+                        EasySPF benefits
+                    </div>
+                    <div class="benefits-list">
+                        <ul>
+                            <li>Add the SPF record on DNS once</li>
+                            <li>Manage from a centralized interface</li>
+                            <li>Solve 10 DNS lookup limitations</li>
+                            <li>Optimize the record without syntax knowledge</li>
+                            <li>Avoid the risk of configuration errors</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <div class="text-center">
+                        <div class="card-item-title font-weight-bold">Upgrade to <span class="text-info">Premium</span>
+                            to Enable
+                            Alert Management Feature
+                        </div>
+                    </div>
+                    <div class="form">
+                        <ul class="tab-group">
+                            <li class="tab active"><a href="#">Monthly</a></li>
+                            <li class="tab"><a href="#">Annual</a></li>
+                        </ul>
+                    </div>
+                    <div class="rates-container position">
+                        <div class="rates-header">
+                        </div>
+                        <div class="rates_body">
+                        </div>
+                        <div class="rates-footer"></div>
+                    </div>
+                    <div class="rates-container">
+                        <div class="rates-header">
+                            <div class="title">Premium</div>
+                            <div class="subtitle">For startups</div>
+                            <div class="price">$35.99</div>
+                            <div class="description">Per month / Billed annually</div>
+                        </div>
+                        <div class="rates_body">
+                            <ul>
+                                <li>100M Emails</li>
+                                <li>2 Domains</li>
+                                <li>3 Month Data History</li>
+                                <li>1 User</li>
+                                <li>EasySPF</li>
+                                <li>Failure Report</li>
+                                <li>Aggregate Geomaps</li>
+                            </ul>
+                        </div>
+                        <div class="rates-footer">
+                            <button class="btn btn-info">Upgrade to Premium</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    addEventListener("resize", (event) => {
+        const mediaQuery = window.matchMedia('(max-width: 768px)');
+        let elementsByClassNameElement = document.getElementsByClassName("menu-btn")[0];
+        elementsByClassNameElement.checked = mediaQuery.matches;
+    });
+</script>
+</body>
+</html>
