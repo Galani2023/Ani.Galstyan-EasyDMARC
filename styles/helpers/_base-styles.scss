@@ -1117,9 +1117,5 @@ div[role="progressbar"]::before {
   position: absolute;
   width: 494px;
   height: 420px;
-  left: calc(50% - 20px / 2);
   bottom: 190px;
-  @include breakpoint-max(tablet) {
-    left: calc(50% - 250px);
-  }
 }
