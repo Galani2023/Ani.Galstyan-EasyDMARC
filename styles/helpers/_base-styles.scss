@@ -275,7 +275,7 @@ body {
   .btn.btn-upgrade {
     padding: 12px 16px;
     margin: 0 16px;
-    font-size: 14px;
+    font-size: $font-size-base;
     color: $white;
     background-color: $success;
     border-color: transparent;
@@ -304,7 +304,6 @@ body {
   z-index: 15;
   padding: 0 6px;
 }
-
 
 .vertical-menu-btn {
   background: transparent;
@@ -676,14 +675,13 @@ body {
   height: 40px;
   padding: 12px;
   line-height: 14px;
-  background-color: #ffffff;
+  background-color: $white;
   cursor: pointer;
   white-space: nowrap;
 
   &.not-border {
     border: 0;
   }
-
 }
 
 .dd-button:after {
@@ -711,11 +709,11 @@ body {
   position: absolute;
   top: 100%;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: $border-radius;
   padding: 0;
   margin: 2px 0 0 0;
   box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
-  background-color: #ffffff;
+  background-color: $white;
   list-style-type: none;
 }
 
@@ -772,7 +770,7 @@ body {
     @include breakpoint-max(tablet) {
       flex: 0 0 100%;
       max-width: 100%;
-      border-radius: 10px;
+      border-radius: $border-radius-lg;
     }
   }
 }
@@ -794,7 +792,7 @@ body {
   @include breakpoint-max(tablet) {
     flex: 0 0 100%;
     max-width: 100%;
-    border-radius: 10px;
+    border-radius: $border-radius-lg;
   }
 }
 
@@ -806,12 +804,12 @@ body {
 }
 
 .card-item-subtitle {
-  font-size: 14px;
+  font-size: $font-size-base;
   color: #333333;
 }
 
 .symbol-title {
-  font-size: 14px;
+  font-size: $font-size-base;
   color: #000;
   margin-top: 24px;
   margin-bottom: 12px;
@@ -862,7 +860,7 @@ body {
 }
 
 .value-text {
-  font-size: 14px;
+  font-size: $font-size-base;
   color: $info;
   padding: 24px;
 }
@@ -873,8 +871,8 @@ body {
 
   .lookups-item {
     padding: 24px;
-    background: #FFFFFF;
-    box-shadow: 0 10px 20px rgba(136, 166, 211, 0.1);
+    background: $white;
+    box-shadow: $box-shadow;
     border-radius: 20px;
 
     .lookups-item-header {
@@ -899,7 +897,7 @@ body {
     width: 173px;
     height: 34px;
     background: linear-gradient(124.48deg, #FFFFFF -12.97%, rgba(255, 255, 255, 0.8) 108.75%);
-    box-shadow: 0 10px 20px rgba(136, 166, 211, 0.1);
+    box-shadow: $box-shadow;
     border-radius: 20px;
 
     span {
@@ -921,7 +919,7 @@ body {
   ul {
     list-style: none;
     padding: 16px 30px;
-    font-size: 14px;
+    font-size: $font-size-base;
   }
 
   ul li::before {
@@ -959,7 +957,7 @@ body {
   display: block;
   float: right;
   margin-left: auto;
-  font-size: 14px;
+  font-size: $font-size-base;
 }
 
 /// Progress Bar
@@ -972,7 +970,7 @@ body {
   }
 }
 
-@property --pgPercentage {
+$property --pgPercentage {
   syntax: '<number>';
   inherits: false;
   initial-value: 0;
@@ -1006,20 +1004,20 @@ div[role="progressbar"]::before {
   width: 252px;
   height: 40px;
   background-color: $hovered-bg;
-  border-radius: 6px;
+  border-radius: $border-radius-xs;
   margin: 24px 0 40px;
 }
 
 .tab-group {
   @include flex-center;
   padding: 4px;
-  border-radius: 6px;
+  border-radius: $border-radius-xs;
 
   .tab {
     padding: 0 12px;
     width: 120px;
     color: $body-text;
-    border-radius: 6px;
+    border-radius: $border-radius-xs;
 
     a {
       @include flex-center;
@@ -1027,7 +1025,7 @@ div[role="progressbar"]::before {
     }
 
     &.active {
-      background: #FFFFFF;
+      background: $white;
       color: $info;
       padding: 6px;
     }
@@ -1039,7 +1037,7 @@ div[role="progressbar"]::before {
   gap: 32px;
   width: 400px;
   height: 505px;
-  background: #FFFFFF;
+  background: $white;
   box-shadow: 0 15px 50px rgba(136, 166, 211, 0.3);
   border-radius: 20px;
   position: relative;
